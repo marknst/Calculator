@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.ezylang.evalex.Expression
 import java.lang.StringBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +31,9 @@ class MainActivity : AppCompatActivity() {
         val divideButton = findViewById<Button>(R.id.divideButton)
         val multiplyButton = findViewById<Button>(R.id.multiplyButton)
         val clearButton = findViewById<Button>(R.id.clearButton)
+        val openingBracketButton = findViewById<Button>(R.id.openingBracketButton)
+        val closingBracketButton = findViewById<Button>(R.id.closingBracketButton)
+        val clearLastButton = findViewById<Button>(R.id.clearLastButton)
 
 
         val stringBuilder = StringBuilder()
@@ -38,40 +42,60 @@ class MainActivity : AppCompatActivity() {
             stringBuilder.append(0)
             resultTextView.text = stringBuilder
         }
+
         oneButton.setOnClickListener {
             stringBuilder.append(1)
             resultTextView.text = stringBuilder
         }
+
         twoButton.setOnClickListener {
             stringBuilder.append(2)
             resultTextView.text = stringBuilder
         }
+
         threeButton.setOnClickListener {
             stringBuilder.append(3)
             resultTextView.text = stringBuilder
         }
+
         fourButton.setOnClickListener {
             stringBuilder.append(4)
             resultTextView.text = stringBuilder
         }
+
         fiveButton.setOnClickListener {
             stringBuilder.append(5)
             resultTextView.text = stringBuilder
         }
+
         sixButton.setOnClickListener {
             stringBuilder.append(6)
             resultTextView.text = stringBuilder
         }
+
         sevenButton.setOnClickListener {
             stringBuilder.append(7)
             resultTextView.text = stringBuilder
         }
+
         eightButton.setOnClickListener {
             stringBuilder.append(8)
             resultTextView.text = stringBuilder
         }
+
         nineButton.setOnClickListener {
             stringBuilder.append(9)
+            resultTextView.text = stringBuilder
+        }
+
+
+        openingBracketButton.setOnClickListener {
+            stringBuilder.append("(")
+            resultTextView.text = stringBuilder
+        }
+
+        closingBracketButton.setOnClickListener {
+            stringBuilder.append(")")
             resultTextView.text = stringBuilder
         }
 
@@ -79,30 +103,44 @@ class MainActivity : AppCompatActivity() {
             stringBuilder.append(".")
             resultTextView.text = stringBuilder
         }
+
         plusButton.setOnClickListener {
             stringBuilder.append("+")
             resultTextView.text = stringBuilder
         }
+
         minusButton.setOnClickListener {
             stringBuilder.append("-")
             resultTextView.text = stringBuilder
         }
+
         divideButton.setOnClickListener {
             stringBuilder.append("/")
             resultTextView.text = stringBuilder
         }
+
         multiplyButton.setOnClickListener {
             stringBuilder.append("*")
             resultTextView.text = stringBuilder
         }
+
         equalButton.setOnClickListener {
-            ///////////////////////////
+            val expression = Expression(stringBuilder.toString())
+            val expressionResult = expression.evaluate().value
+            resultTextView.text = expressionResult.toString()
+            stringBuilder.clear()
+            stringBuilder.append(expressionResult)
         }
+
         clearButton.setOnClickListener {
             stringBuilder.clear()
             resultTextView.text = "0"
         }
 
+        clearLastButton.setOnClickListener {
+            stringBuilder.deleteCharAt(stringBuilder.length-1)
+            resultTextView.text = stringBuilder.toString()
 
+        }
     }
 }

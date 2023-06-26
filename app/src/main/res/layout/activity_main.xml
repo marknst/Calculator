@@ -202,11 +202,41 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:backgroundTint="@color/DarkSlateBlue"
-        android:text="C"
+        android:text="Clear ALL"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/sevenButton"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintRight_toLeftOf="@id/divideButton"
+        app:layout_constraintWidth_percent="0.25" />
+    <Button
+        android:id="@+id/openingBracketButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="("
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/multiplyButton"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintRight_toLeftOf="@id/closingBracketButton"
+        app:layout_constraintWidth_percent="0.25" />
+    <Button
+        android:id="@+id/closingBracketButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=")"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/minusButton"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.25" />
+    <Button
+        android:id="@+id/clearLastButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Clear last"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/divideButton"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintRight_toLeftOf="@id/openingBracketButton"
         app:layout_constraintWidth_percent="0.25" />
 
 
