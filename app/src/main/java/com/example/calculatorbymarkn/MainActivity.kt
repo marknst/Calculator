@@ -127,9 +127,10 @@ class MainActivity : AppCompatActivity() {
         equalButton.setOnClickListener {
             val expression = Expression(stringBuilder.toString())
             val expressionResult = expression.evaluate().value
-            resultTextView.text = expressionResult.toString()
+            val roundedResult = String.format("%.3f", expressionResult)
+            resultTextView.text = roundedResult
             stringBuilder.clear()
-            stringBuilder.append(expressionResult)
+            stringBuilder.append(roundedResult)
         }
 
         clearButton.setOnClickListener {
