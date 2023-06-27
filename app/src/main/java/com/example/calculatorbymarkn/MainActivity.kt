@@ -129,10 +129,10 @@ class MainActivity : AppCompatActivity() {
             try {
                 val expression = Expression(stringBuilder.toString())
                 val expressionResult = expression.evaluate().value
-                val roundedResult = String.format("%.3f", expressionResult)
-                resultTextView.text = roundedResult
+//                val roundedResult = String.format("%.3f", expressionResult)
+                resultTextView.text = expressionResult.toString()
                 stringBuilder.clear()
-                stringBuilder.append(roundedResult)
+                stringBuilder.append(expressionResult)
             } catch (t: Throwable) {
                 Toast.makeText(this@MainActivity, "Exception: $t", Toast.LENGTH_LONG).show()
             }
@@ -144,9 +144,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         clearLastButton.setOnClickListener {
-            stringBuilder.deleteCharAt(stringBuilder.length-1)
-            resultTextView.text = stringBuilder.toString()
+            if (stringBuilder.isNotEmpty()) {
+                stringBuilder.deleteCharAt(stringBuilder.length-1)
+                resultTextView.text = stringBuilder.toString()
+            }
 
+            if (stringBuilder.isEmpty()) {
+                resultTextView.text = "0"
+            }
         }
     }
 }
