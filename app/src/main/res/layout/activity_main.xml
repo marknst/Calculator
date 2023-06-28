@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/Gray"
+    android:background="@color/Maroon"
     >
 
     <TextView
@@ -23,6 +23,7 @@
 
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/zeroButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -34,7 +35,7 @@
         android:textColor="@color/White"
         app:layout_constraintWidth_percent="0.5" />
     <Button
-
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/pointButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -47,6 +48,7 @@
         android:textColor="@color/White"/>
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/equalButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -59,6 +61,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/oneButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -71,6 +74,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/twoButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -83,6 +87,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/threeButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -95,6 +100,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/fourButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -107,6 +113,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/fiveButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -119,6 +126,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/sixButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -131,6 +139,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/sevenButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -143,6 +152,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/eightButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -155,6 +165,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/nineButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -167,6 +178,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/plusButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -179,10 +191,11 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/divideButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="/"
+        android:text="÷"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/sevenButton"
         app:layout_constraintHeight_percent="0.1"
@@ -191,10 +204,11 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/multiplyButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="*"
+        android:text="×"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/sevenButton"
         app:layout_constraintHeight_percent="0.1"
@@ -203,6 +217,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/minusButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -215,6 +230,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/clearButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -226,7 +242,9 @@
         app:layout_constraintRight_toLeftOf="@id/divideButton"
         android:textColor="@color/White"
         app:layout_constraintWidth_percent="0.25" />
+
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/openingBracketButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -239,6 +257,7 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/closingBracketButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -251,11 +270,12 @@
         app:layout_constraintWidth_percent="0.25" />
 
     <Button
+        android:background="@drawable/rounded_rectangle_background"
         android:id="@+id/clearLastButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Clear last"
-        android:textSize="20sp"
+        android:text="⊲"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@id/divideButton"
         app:layout_constraintHeight_percent="0.1"
         app:layout_constraintRight_toLeftOf="@id/openingBracketButton"
