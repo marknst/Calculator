@@ -93,16 +93,7 @@ class MainActivity : AppCompatActivity() {
             resultTextView.text = stringBuilder
         }
         equalButton.setOnClickListener {
-            try {
-                val expression = Expression(stringBuilder.toString())
-                val expressionResult = expression.evaluate().value
-//                val roundedResult = String.format("%.3f", expressionResult)
-                resultTextView.text = expressionResult.toString()
-                stringBuilder.clear()
-                stringBuilder.append(expressionResult)
-            } catch (t: Throwable) {
-                Toast.makeText(this@MainActivity, "Exception: $t", Toast.LENGTH_LONG).show()
-            }
+            calculate()
         }
         clearButton.setOnClickListener {
             stringBuilder.clear()
@@ -117,6 +108,19 @@ class MainActivity : AppCompatActivity() {
             if (stringBuilder.isEmpty()) {
                 resultTextView.text = "0"
             }
+        }
+    }
+
+    private fun ActivityMainBinding.calculate() {
+        try {
+            val expression = Expression(stringBuilder.toString())
+            val expressionResult = expression.evaluate().value
+            val roundedResult = String.format("%.2f", expressionResult)
+            resultTextView.text = roundedResult
+            stringBuilder.clear()
+            stringBuilder.append(roundedResult)
+        } catch (t: Throwable) {
+            Toast.makeText(this@MainActivity, "Exception: $t", Toast.LENGTH_LONG).show()
         }
     }
 }

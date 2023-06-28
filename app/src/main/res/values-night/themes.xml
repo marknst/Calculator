@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.CalculatorByMarkN" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <item name="colorPrimary">@color/DarkGray</item>
+        <item name="colorPrimary">@color/Brown</item>
         <item name="android:textColor">@color/White</item>
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
